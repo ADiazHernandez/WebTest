@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Professional Website Template</title>
+    <meta name="description" content="A clean, responsive website template to build upon." />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">YourBrand</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="site-nav" id="siteNav" aria-label="Primary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <h1>Build a beautiful product, faster.</h1>
+          <p class="lead">A minimal, accessible, and responsive starting point for marketing sites and portfolios.</p>
+          <p class="hero-cta">
+            <a class="btn primary" href="#work">See work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <h2>Key Features</h2>
+        <div class="grid grid-3">
+          <article>
+            <h3>Responsive</h3>
+            <p>Looks great on mobile, tablet, and desktop by default.</p>
+          </article>
+          <article>
+            <h3>Accessible</h3>
+            <p>Semantic markup and clear focus states make this template accessible.</p>
+          </article>
+          <article>
+            <h3>Easy to customize</h3>
+            <p>Clear variables and simple layout make theming straightforward.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="work container">
+        <h2>Selected Work</h2>
+        <div class="grid grid-3 cards">
+          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project One</strong><p>Short description.</p></figcaption></figure>
+          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project Two</strong><p>Short description.</p></figcaption></figure>
+          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project Three</strong><p>Short description.</p></figcaption></figure>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <p>Send a message and I'll get back to you.</p>
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> YourBrand — Built with this template.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
