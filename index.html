@@ -11,14 +11,18 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#">YourBrand</a>
+        <a class="brand" href="#">
+          <img src="Images/Logo.png" alt="Logo" class="logo" />
+          JD Property Services
+        </a>
         <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
         <nav class="site-nav" id="siteNav" aria-label="Primary">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -27,66 +31,64 @@
     <main>
       <section id="home" class="hero">
         <div class="container hero-inner">
-          <h1>Build a beautiful product, faster.</h1>
-          <p class="lead">A minimal, accessible, and responsive starting point for marketing sites and portfolios.</p>
+          <h1>Professional Property Maintenance & Construction</h1>
+          <p class="lead">Full-service property maintenance, construction, and facility management solutions. We keep your properties in perfect condition.</p>
           <p class="hero-cta">
-            <a class="btn primary" href="#work">See work</a>
-            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn primary" href="services.html">Our Services</a>
+            <a class="btn" href="contact.html">Request Quote</a>
           </p>
         </div>
       </section>
 
-      <section id="features" class="features container">
-        <h2>Key Features</h2>
+      <section id="services" class="services container">
+        <h2>Our Services</h2>
         <div class="grid grid-3">
-          <article>
-            <h3>Responsive</h3>
-            <p>Looks great on mobile, tablet, and desktop by default.</p>
+          <article class="service-card">
+            <h3>🔧 Maintenance & Repairs</h3>
+            <p>Regular maintenance, emergency repairs, and preventive care to keep your properties running smoothly.</p>
+            <a href="services.html" class="card-link">Learn More →</a>
           </article>
-          <article>
-            <h3>Accessible</h3>
-            <p>Semantic markup and clear focus states make this template accessible.</p>
+          <article class="service-card">
+            <h3>🏗️ Construction Services</h3>
+            <p>Professional construction, renovations, and upgrades managed with quality and efficiency.</p>
+            <a href="services.html" class="card-link">Learn More →</a>
           </article>
-          <article>
-            <h3>Easy to customize</h3>
-            <p>Clear variables and simple layout make theming straightforward.</p>
+          <article class="service-card">
+            <h3>🧹 Facility Management</h3>
+            <p>Comprehensive facility management including cleaning, landscaping, and general upkeep.</p>
+            <a href="services.html" class="card-link">Learn More →</a>
           </article>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <h2>Why Choose Us</h2>
+        <div class="about-content">
+          <p>JD Property Services has been providing top-quality property maintenance and construction services for over 12 years. Our experienced team of licensed contractors and maintenance specialists is committed to delivering exceptional results on every project.</p>
+          <p><a href="about.html" class="btn primary">Learn About Our Company</a></p>
         </div>
       </section>
 
       <section id="work" class="work container">
-        <h2>Selected Work</h2>
+        <h2>Featured Projects</h2>
         <div class="grid grid-3 cards">
-          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project One</strong><p>Short description.</p></figcaption></figure>
-          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project Two</strong><p>Short description.</p></figcaption></figure>
-          <figure class="card"><div class="thumb" aria-hidden="true"></div><figcaption><strong>Project Three</strong><p>Short description.</p></figcaption></figure>
+          <figure class="card"><div class="thumb property-1" aria-hidden="true"></div><figcaption><strong>Office Building Renovation</strong><p>Commercial • 2024</p></figcaption></figure>
+          <figure class="card"><div class="thumb property-2" aria-hidden="true"></div><figcaption><strong>Multi-Unit Complex Maintenance</strong><p>Residential • Active</p></figcaption></figure>
+          <figure class="card"><div class="thumb property-3" aria-hidden="true"></div><figcaption><strong>Facility Management Contract</strong><p>Industrial • Ongoing</p></figcaption></figure>
         </div>
+        <p style="text-align:center;margin-top:32px;"><a href="projects.html" class="btn primary">View All Projects</a></p>
       </section>
 
       <section id="contact" class="contact container">
-        <h2>Contact</h2>
-        <p>Send a message and I'll get back to you.</p>
-        <form id="contactForm" class="contact-form" novalidate>
-          <label for="name">Name</label>
-          <input id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <div class="form-actions">
-            <button class="btn primary" type="submit">Send</button>
-            <button class="btn" type="reset">Reset</button>
-          </div>
-        </form>
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today for a free quote and consultation on your project.</p>
+        <p><a class="btn primary" href="contact.html">Contact Us Now</a></p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> YourBrand — Built with this template.</p>
+        <p>&copy; <span id="year"></span> JD Property Services — Professional Property Maintenance & Construction.</p>
       </div>
     </footer>
 

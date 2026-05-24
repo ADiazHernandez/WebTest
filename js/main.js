@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded',function(){
       const expanded = siteNav.classList.contains('open');
       navToggle.setAttribute('aria-expanded', String(expanded));
     });
+    
+    // close nav when a link is clicked
+    const navLinks = siteNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // simple client-side form handling (no backend)
