@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded',function(){
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // active page tab highlight
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const linkPage = href ? href.split('/').pop() : '';
+      if (linkPage === currentPage || (linkPage === 'index.html' && currentPage === '')) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+      }
+    });
   }
 
   // simple client-side form handling (no backend)
