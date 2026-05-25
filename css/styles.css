@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
   --bg: #090909;
@@ -52,6 +52,23 @@ h3 {
 
 p {
   margin: 0;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* smaller body-type and supporting text */
+.small-text,
+.lead,
+.card figcaption p,
+.value-card p,
+.why-list li,
+.about-content,
+.contact-info,
+.contact-form-wrapper {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--muted);
 }
 
 .container {
@@ -167,7 +184,8 @@ p {
 .lead {
   color: var(--muted);
   max-width: 68ch;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-cta {
@@ -180,7 +198,12 @@ p {
 .about,
 .work,
 .contact {
-  padding: 72px 0;
+  padding: 96px 0;
+}
+
+/* Move the services section up slightly on the homepage */
+#services {
+  padding-top: 60px;
 }
 
 .services h2,
@@ -188,9 +211,29 @@ p {
 .work h2,
 .contact h2 {
   color: var(--accent);
-  border-bottom: 3px solid var(--accent);
   display: inline-block;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 1.6rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Use a positioned pseudo-element for the homepage underline so we can raise it precisely */
+#services h2 {
+  padding-bottom: 6px;
+  margin-bottom: 0.9rem;
+  border-bottom: none;
+}
+
+#services h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 140px;
+  background: var(--accent);
+  bottom: 2px; /* nudge the line up closer to the text */
+  border-radius: 2px;
 }
 
 .about-full {
@@ -258,9 +301,15 @@ p {
   background: rgba(255,255,255,0.01);
 }
 
+.services .grid,
+.about .grid,
+.work .grid {
+  margin-top: 28px;
+}
+
 .grid {
   display: grid;
-  gap: 28px;
+  gap: 36px;
 }
 
 .grid-3 {
@@ -278,7 +327,7 @@ p {
 }
 
 .service-card {
-  padding: 30px;
+  padding: 36px;
   background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
@@ -286,12 +335,15 @@ p {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 42px rgba(0,0,0,0.55);
   border-color: rgba(212,175,55,0.35);
+  z-index: 3;
 }
 
 .service-card h3 {
@@ -332,7 +384,7 @@ p {
 }
 
 .card figcaption {
-  padding: 22px;
+  padding: 28px;
   background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
 }
 
