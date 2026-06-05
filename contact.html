@@ -3,20 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="theme-color" content="#090805" />
     <title>Contact - JD Property Services</title>
-    <meta name="description" content="Get in touch with JD Property Services for your property maintenance and construction needs." />
+    <meta name="description" content="Contact JD Property Services for property maintenance, construction, or facility management." />
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="Images/Logo.png" alt="Logo" class="logo" />
-          JD Property Services
-        </a>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a class="brand" href="index.html">JD Property Services</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
           <ul>
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="services.html" class="nav-link">Services</a></li>
@@ -29,42 +26,44 @@
     </header>
 
     <main>
-      <section class="hero page-hero">
+      <section class="hero">
         <div class="container hero-inner">
-          <h1>Get In Touch</h1>
-          <p class="lead">Ready to discuss your property maintenance or construction project? Contact us today.</p>
+          <div class="hero-copy">
+            <p class="eyebrow">Connect with us</p>
+            <h1>Let's talk about your property needs.</h1>
+            <p class="lead">Whether you need an estimate, a maintenance plan, or emergency support, our team is ready to help.</p>
+          </div>
         </div>
       </section>
 
-      <section class="contact container">
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <h2>Contact Information</h2>
-            <div class="info-block">
-              <h3>📞 Phone</h3>
+      <section class="section">
+        <div class="container contact-layout">
+          <aside class="contact-panel">
+            <h2>Contact details</h2>
+            <div class="contact-item">
+              <strong>Phone</strong>
               <p>(555) 123-4567</p>
-              <p>Available 24/7 for emergencies</p>
+              <p>Available 24/7 for urgent support.</p>
             </div>
-            <div class="info-block">
-              <h3>📧 Email</h3>
+            <div class="contact-item">
+              <strong>Email</strong>
               <p>info@jdpropertyservices.com</p>
-              <p>Response time: Within 2 hours</p>
+              <p>Response time within 2 business hours.</p>
             </div>
-            <div class="info-block">
-              <h3>📍 Location</h3>
+            <div class="contact-item">
+              <strong>Location</strong>
               <p>123 Main Street</p>
               <p>Your City, ST 12345</p>
             </div>
-            <div class="info-block">
-              <h3>🕐 Hours</h3>
-              <p>Monday - Friday: 8AM - 6PM</p>
-              <p>Saturday: 9AM - 4PM</p>
-              <p>Sunday: Emergency Only</p>
+            <div class="contact-item">
+              <strong>Office hours</strong>
+              <p>Mon–Fri: 8am–6pm</p>
+              <p>Sat: 9am–4pm • Sun: Emergency only</p>
             </div>
-          </div>
+          </aside>
 
-          <div class="contact-form-wrapper">
-            <h2>Send Us a Message</h2>
+          <section class="contact-form-wrapper">
+            <h2>Send a message</h2>
             <form id="contactForm" class="contact-form" novalidate>
               <label for="name">Name *</label>
               <input id="name" name="name" required />
@@ -72,12 +71,12 @@
               <label for="email">Email *</label>
               <input id="email" name="email" type="email" required />
 
-              <label for="phone">Phone Number</label>
+              <label for="phone">Phone</label>
               <input id="phone" name="phone" type="tel" />
 
-              <label for="service">Service Interested In *</label>
+              <label for="service">Service of interest *</label>
               <select id="service" name="service" required>
-                <option value="">Select a service...</option>
+                <option value="">Select a service</option>
                 <option value="maintenance">Maintenance & Repairs</option>
                 <option value="construction">Construction Services</option>
                 <option value="facility">Facility Management</option>
@@ -85,21 +84,21 @@
               </select>
 
               <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="6" required></textarea>
 
               <div class="form-actions">
-                <button class="btn primary" type="submit">Send Message</button>
-                <button class="btn" type="reset">Clear</button>
+                <button class="btn primary" type="submit">Send message</button>
+                <button class="btn secondary" type="reset">Clear</button>
               </div>
             </form>
-          </div>
+          </section>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> JD Property Services — Professional Property Maintenance & Construction.</p>
+        <p>&copy; <span id="year"></span> JD Property Services — maintenance, renovation, and facility care.</p>
       </div>
     </footer>
 

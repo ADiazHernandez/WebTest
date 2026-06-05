@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="theme-color" content="#090805" />
     <title>Services - JD Property Services</title>
     <meta name="description" content="Professional property maintenance, construction, and facility management services." />
     <link rel="stylesheet" href="css/styles.css">
@@ -11,12 +11,9 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">
-          <img src="Images/Logo.png" alt="Logo" class="logo" />
-          JD Property Services
-        </a>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a class="brand" href="index.html">JD Property Services</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
           <ul>
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="services.html" class="nav-link">Services</a></li>
@@ -29,61 +26,104 @@
     </header>
 
     <main>
-      <section class="hero page-hero">
+      <section class="hero">
         <div class="container hero-inner">
-          <h1>Our Services</h1>
-          <p class="lead">Comprehensive property maintenance and construction solutions tailored to your needs.</p>
-        </div>
-      </section>
-
-      <section class="services container">
-        <h2>What We Offer</h2>
-        <div class="services-grid">
-          <div class="service-detail">
-            <h3>🔧 Maintenance & Repairs</h3>
-            <p>Regular maintenance, emergency repairs, and preventive care to keep your properties running smoothly. Our team handles:</p>
-            <ul>
-              <li>Plumbing and electrical repairs</li>
-              <li>HVAC system maintenance</li>
-              <li>Structural repairs and inspections</li>
-              <li>24/7 emergency response</li>
-            </ul>
-          </div>
-
-          <div class="service-detail">
-            <h3>🏗️ Construction Services</h3>
-            <p>Professional construction, renovations, and upgrades managed with quality and efficiency. Services include:</p>
-            <ul>
-              <li>Full property renovations</li>
-              <li>Interior and exterior upgrades</li>
-              <li>New construction oversight</li>
-              <li>Commercial and residential projects</li>
-            </ul>
-          </div>
-
-          <div class="service-detail">
-            <h3>🧹 Facility Management</h3>
-            <p>Comprehensive facility management including cleaning, landscaping, and general upkeep. Our offerings:</p>
-            <ul>
-              <li>Professional cleaning services</li>
-              <li>Landscaping and grounds maintenance</li>
-              <li>Preventive maintenance programs</li>
-              <li>Customized facility plans</li>
-            </ul>
+          <div class="hero-copy">
+            <p class="eyebrow">Our services</p>
+            <h1>Solutions that protect your property value and streamline operations.</h1>
+            <p class="lead">We manage maintenance, construction, and facility support with a focus on reliability, efficiency, and long-term peace of mind.</p>
           </div>
         </div>
       </section>
 
-      <section class="contact container">
-        <h2>Ready to Get Started?</h2>
-        <p>Contact us today for a free consultation and quote on your project.</p>
-        <p><a class="btn primary" href="contact.html">Request a Quote</a></p>
+      <section class="section">
+        <div class="container">
+          <div class="section-intro">
+            <h2>Core service areas</h2>
+            <p>Every offering is designed to keep your property operating smoothly and looking its best.</p>
+          </div>
+
+          <div class="grid services-grid">
+            <article class="card service-card">
+              <img class="card-image" src="Images/Projects/Carpentry%20Repair.jpg" alt="Maintenance and repair work" />
+              <div class="card-content">
+                <div class="icon">🔧</div>
+                <h3>Maintenance & Repairs</h3>
+                <p>Prompt repairs, inspections, and preventive plans to reduce downtime and avoid costly issues.</p>
+                <ul>
+                  <li>Electrical, plumbing & HVAC support</li>
+                  <li>Structural repairs and system checks</li>
+                  <li>Preventive maintenance schedules</li>
+                  <li>Emergency response capabilities</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card service-card">
+              <img class="card-image" src="Images/Projects/Drywall%20Repair.jpg" alt="Construction and renovation" />
+              <div class="card-content">
+                <div class="icon">🏗️</div>
+                <h3>Construction & Renovation</h3>
+                <p>Renovations, remodeling, and new construction work delivered on time with quality craftsmanship.</p>
+                <ul>
+                  <li>Interior and exterior renovations</li>
+                  <li>Commercial and residential upgrades</li>
+                  <li>Project coordination and oversight</li>
+                  <li>Code compliance and quality control</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card service-card">
+              <img class="card-image" src="Images/Projects/Landscape%20%26%20Property%20Maintenance.jpg" alt="Facility management" />
+              <div class="card-content">
+                <div class="icon">🧹</div>
+                <h3>Facility Management</h3>
+                <p>Customized programs for cleaning, grounds, and operations so your site stays safe, clean, and presentable.</p>
+                <ul>
+                  <li>Grounds and landscaping care</li>
+                  <li>Cleaning and janitorial services</li>
+                  <li>Asset tracking and reporting</li>
+                  <li>Ongoing facility planning</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-panel">
+          <div class="section-intro">
+            <h2>How we make it easy</h2>
+            <p>From the first estimate to the final walkthrough, our process is built to reduce friction and keep you informed.</p>
+          </div>
+
+          <div class="grid stats-grid">
+            <div class="stats-card">
+              <strong>Step 1</strong>
+              <span>Consultation & planning</span>
+            </div>
+            <div class="stats-card">
+              <strong>Step 2</strong>
+              <span>Clear estimates and scheduling</span>
+            </div>
+            <div class="stats-card">
+              <strong>Step 3</strong>
+              <span>Delivery with follow-up support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p><a class="btn primary" href="contact.html">Book a service review</a></p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> JD Property Services — Professional Property Maintenance & Construction.</p>
+        <p>&copy; <span id="year"></span> JD Property Services — maintenance, renovation, and facility care.</p>
       </div>
     </footer>
 

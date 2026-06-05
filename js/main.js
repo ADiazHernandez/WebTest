@@ -1,31 +1,28 @@
-document.addEventListener('DOMContentLoaded',function(){
-  // year
-  const y = new Date().getFullYear();
-  const year = document.getElementById('year');
-  if(year) year.textContent = y;
+document.addEventListener('DOMContentLoaded', function () {
+  const yearNode = document.getElementById('year');
+  if (yearNode) {
+    yearNode.textContent = new Date().getFullYear();
+  }
 
-  // nav toggle for small screens
   const navToggle = document.getElementById('navToggle');
   const siteNav = document.getElementById('siteNav');
-  if(navToggle && siteNav){
-    navToggle.addEventListener('click',()=>{
+
+  if (navToggle && siteNav) {
+    navToggle.addEventListener('click', function () {
       siteNav.classList.toggle('open');
       const expanded = siteNav.classList.contains('open');
       navToggle.setAttribute('aria-expanded', String(expanded));
     });
-    
-    // close nav when a link is clicked
-    const navLinks = siteNav.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+
+    siteNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
         siteNav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
 
-    // active page tab highlight
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.forEach(link => {
+    siteNav.querySelectorAll('a').forEach(function (link) {
       const href = link.getAttribute('href');
       const linkPage = href ? href.split('/').pop() : '';
       if (linkPage === currentPage || (linkPage === 'index.html' && currentPage === '')) {
@@ -38,19 +35,18 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   }
 
-  // simple client-side form handling (no backend)
   const form = document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
+  if (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
       const name = form.name.value.trim();
       const email = form.email.value.trim();
       const message = form.message.value.trim();
-      if(!name||!email||!message){
-        alert('Please complete all fields.');
+      if (!name || !email || !message) {
+        alert('Please fill in the required fields before sending your message.');
         return;
       }
-      alert('Thanks, ' + name + '! This template does not send messages — wire up a backend or service.');
+      alert('Thanks, ' + name + '! Your message is ready to be sent. This site does not currently process submissions, so please connect the form to your backend.');
       form.reset();
     });
   }
