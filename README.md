@@ -1,24 +1,17 @@
-# WebTest
+# JD Property Services Website
 
-Professional website template scaffold
+Copyright © 2026 JD Property Services. All Rights Reserved.
 
-Files added:
-- [index.html](index.html)
-- [css/styles.css](css/styles.css)
-- [js/main.js](js/main.js)
+This repository contains the source code, website design, branding, graphics, text, images, and other materials used for the JD Property Services website.
 
-Quick start
+No permission is granted to copy, modify, distribute, republish, sell, sublicense, or otherwise use any portion of this repository or its contents without prior written authorization from JD Property Services.
 
-Open `index.html` in your browser, or run a simple local server:
+This repository is made publicly accessible solely for website hosting and deployment purposes.
 
-```bash
-# from workspace root
-python3 -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
+Unauthorized use, reproduction, or distribution of any content contained in this repository may violate copyright and other applicable laws.
 
-Next steps
+For inquiries regarding permissions or licensing, please contact:
 
-- Replace `YourBrand` with your company or project name.
-- Swap content in the `#work` section with real projects.
-- Hook the contact form to a backend or service like Formspree, Netlify Forms, or a server endpoint.
+**JD Property Services**
+Email: jdpropertyservicesmadison@gmail.com
+Phone: 608-512-3790
