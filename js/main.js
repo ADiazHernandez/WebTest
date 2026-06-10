@@ -55,9 +55,19 @@ if (form) {
       if (response.ok) {
         const successMessage = document.getElementById('successMessage');
 
-        if (successMessage) {
-          successMessage.style.display = 'block';
+        const currentLang = localStorage.getItem('siteLang') || 'en';
+
+      if (successMessage) {
+        if (currentLang === 'es') {
+          successMessage.textContent =
+            '✓ ¡Gracias! Su solicitud de presupuesto ha sido enviada correctamente. Nos pondremos en contacto con usted pronto.';
+        } else {
+          successMessage.textContent =
+            '✓ Thank you! Your estimate request has been submitted successfully. We will contact you soon.';
         }
+
+        successMessage.style.display = 'block';
+      }
 
         form.reset();
 
