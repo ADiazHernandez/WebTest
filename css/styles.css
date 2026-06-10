@@ -495,9 +495,41 @@ main {
   padding: 2rem;
 }
 
+.contact-layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(300px, 1fr) minmax(360px, 1.2fr);
+  align-items: stretch;
+}
+
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
 .contact-panel h2,
 .contact-form-wrapper h2 {
   margin-top: 0;
+}
+
+.contact-panel h2 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+.contact-panel p {
+  margin: 0 0 0.8rem 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-panel a {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .contact-item {
@@ -533,6 +565,34 @@ main {
   background: rgba(255,255,255,0.04);
   color: var(--text);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Make the select box visually match other inputs and ensure
+   dropdown options are readable on dark backgrounds */
+.contact-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+/* Style native option elements for better contrast in dropdowns */
+.contact-form select option {
+  background: rgba(18,18,18,0.98);
+  color: var(--text);
+}
+
+/* For some browsers, ensure the selected option remains readable */
+.contact-form select:focus option:checked,
+.contact-form select option:checked {
+  background: rgba(212,175,55,0.12);
+  color: var(--text);
+}
+
+/* Hide default select arrow in IE/Edge and allow custom styling if desired */
+.contact-form select::-ms-expand {
+  display: none;
 }
 
 .contact-form textarea {
@@ -666,4 +726,24 @@ main {
   .site-header {
     padding: 0 12px;
   }
+}
+
+/* Language toggle in header */
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.lang-toggle:hover,
+.lang-toggle:focus {
+  color: var(--text);
+  border-color: rgba(212,175,55,0.2);
 }
