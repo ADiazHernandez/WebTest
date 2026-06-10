@@ -62,11 +62,14 @@
         <section class="contact-form-wrapper">
           <h2>Request a Free Estimate</h2>
 
-          <form
-            action="https://formsubmit.co/jdpropertyservicesmadison@gmail.com"
-            method="POST"
-            class="contact-form"
-          >
+          <form id="contactForm" class="contact-form">
+            <div id="successMessage" class="success-message">
+            ✓ Thank you! Your estimate request has been submitted successfully. We will contact you soon.
+            </div>
+
+            <input type="hidden" name="_subject" value="New Quote Request - JD Property Services">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
             <input type="hidden" name="_subject" value="New Quote Request - JD Property Services">
             <input type="hidden" name="_captcha" value="false">

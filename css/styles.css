@@ -747,3 +747,15 @@ main {
   color: var(--text);
   border-color: rgba(212,175,55,0.2);
 }
+
+.success-message {
+  display: none;
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.35);
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 1.6;
+}
