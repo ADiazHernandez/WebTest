@@ -36,20 +36,44 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-      if (!name || !email || !message) {
-        alert('Please fill in the required fields before sending your message.');
-        return;
+
+if (form) {
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/jdpropertyservicesmadison@gmail.com',
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+
+      if (response.ok) {
+        const successMessage = document.getElementById('successMessage');
+
+        if (successMessage) {
+          successMessage.style.display = 'block';
+        }
+
+        form.reset();
+
+        window.scrollTo({
+          top: form.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      } else {
+        alert('There was a problem submitting your request. Please try again.');
       }
-      alert('Thanks, ' + name + '! Your message is ready to be sent. This site does not currently process submissions, so please connect the form to your backend.');
-      form.reset();
-    });
-  }
+    } catch (error) {
+      console.error(error);
+      alert('There was a problem submitting your request. Please try again.');
+    }
+  });
+}
 
   /* Translation / language toggle (full reversible translations) */
   const translations = {
