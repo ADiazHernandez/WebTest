@@ -775,16 +775,20 @@ main {
 .comparison-slider {
     position: relative;
     max-width: 1000px;
+    height: 600px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
 }
 
+/* BEFORE image */
 .comparison-slider > img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* AFTER container */
 .after-wrapper {
     position: absolute;
     top: 0;
@@ -794,6 +798,7 @@ main {
     overflow: hidden;
 }
 
+/* AFTER image */
 .after-wrapper img {
     position: absolute;
     top: 0;
@@ -802,7 +807,6 @@ main {
     height: 100%;
     object-fit: cover;
 }
-
 .slider-control {
     position: absolute;
     inset: 0;
