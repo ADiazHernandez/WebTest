@@ -714,17 +714,50 @@ main {
 }
 
 @media (max-width: 720px) {
-  .hero {
-    min-height: auto;
-    padding-top: 4.5rem;
-  }
-
-  .hero-copy h1 {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-  }
 
   .site-header {
     padding: 0 12px;
+  }
+
+  .header-inner {
+    padding: 12px 0;
+  }
+
+  .brand {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero.hero-simple {
+    min-height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .hero.hero-simple .hero-copy {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  .hero-copy p.lead {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-intro {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -854,4 +887,28 @@ main {
 
 .after-label {
     right: 15px;
+}
+
+@media (max-width: 720px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 720px) {
+  .lang-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }
