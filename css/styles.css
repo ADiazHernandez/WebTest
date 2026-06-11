@@ -927,11 +927,3 @@ main {
     font-size: 0.9rem;
   }
 }
-
-.nav-toggle {
-    background: red !important;
-}
-
-.lang-toggle {
-    background: blue !important;
-}
