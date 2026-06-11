@@ -682,11 +682,10 @@ main {
 
 @media (max-width: 820px) {
 
-  .header-inner {
+ .header-inner {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
 }
 
   .brand {
@@ -703,13 +702,16 @@ main {
   }
 
   .site-nav {
-    width: 100%;
     display: none;
-  }
+    width: 100%;
+    flex-basis: 100%;
+    order: 99;
+}
+
 
   .site-nav.open {
     display: block;
-  }
+}
 
   .site-nav ul {
     flex-direction: column;
