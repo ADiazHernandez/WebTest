@@ -686,10 +686,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
+    justify-content: space-between;
+  }
 
   .brand {
-    flex: 1;
+    flex: 0 1 auto;
+    max-width: 60%;
   }
 
   .nav-toggle {
