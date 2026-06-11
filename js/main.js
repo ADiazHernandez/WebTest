@@ -233,6 +233,20 @@ if (form) {
     "Ready to work with a team that cares about your property as much as you do?": "¿Listo para trabajar con un equipo que cuida su propiedad tanto como usted?",
     "Maintaining Properties. Building Trust.": "Mantenimiento de propiedades. Construyendo confianza.",
     "Get in touch": "Póngase en contacto",
+    "Our services": "Nuestros servicios",
+
+  "Before & After Transformations": "Transformaciones Antes y Después",
+  "Drag the slider to see the results of our work.": "Deslice el control para ver los resultados de nuestro trabajo.",
+
+  "Debris Removal & Cleanup": "Eliminación de Escombros y Limpieza",
+  "Interior & Exterior Painting": "Pintura Interior y Exterior",
+  "Landscape & Property Maintenance": "Mantenimiento de Jardines y Propiedades",
+  "Restaurant Maintenance": "Mantenimiento de Restaurantes",
+
+  "BEFORE": "ANTES",
+  "AFTER": "DESPUÉS",
+  "Our services": "Nuestros servicios",
+  "Interior & Exterior Painting & Repair": "Pintura y Reparación Interior y Exterior",
 
     /* Buttons */
     "Send message": "Enviar mensaje",
@@ -264,7 +278,7 @@ if (form) {
 
   function applyLanguage(lang) {
     // Elements to translate by selector
-    const selectors = 'h1,h2,h3,h4,p,span,strong,li,a,button,label,option,blockquote,figcaption,figcaption strong,figcaption p,small,em';
+    const selectors = 'h1,h2,h3,h4,p,span,strong,li,a,button,label,option,blockquote,figcaption,figcaption strong,figcaption p,small,em,div';
     document.querySelectorAll(selectors).forEach(function (el) {
       const raw = el.getAttribute('data-i18n-original-raw') || el.textContent || '';
       const original = (raw.replace ? raw.replace(/\s+/g, ' ').trim() : String(raw).trim());
