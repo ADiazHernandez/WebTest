@@ -401,3 +401,17 @@ if (form) {
     });
   }
 });
+
+
+document.querySelectorAll('.comparison-slider').forEach(slider => {
+
+    const range = slider.querySelector('.slider-control');
+    const after = slider.querySelector('.after-wrapper');
+    const handle = slider.querySelector('.slider-handle');
+
+    range.addEventListener('input', () => {
+        after.style.width = range.value + '%';
+        handle.style.left = range.value + '%';
+    });
+
+});
