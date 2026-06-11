@@ -685,8 +685,9 @@ main {
   .header-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
   .brand {
     flex: 1;
@@ -694,7 +695,6 @@ main {
 
   .nav-toggle {
     display: inline-flex;
-    margin-left: auto;
   }
 
   .lang-toggle {
