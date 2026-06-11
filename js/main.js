@@ -409,9 +409,15 @@ document.querySelectorAll('.comparison-slider').forEach(slider => {
     const after = slider.querySelector('.after-wrapper');
     const handle = slider.querySelector('.slider-handle');
 
+    function updateSlider(value) {
+        after.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+        handle.style.left = value + '%';
+    }
+
+    updateSlider(50);
+
     range.addEventListener('input', () => {
-        after.style.width = range.value + '%';
-        handle.style.left = range.value + '%';
+        updateSlider(range.value);
     });
 
 });

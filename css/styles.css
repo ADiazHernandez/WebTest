@@ -793,7 +793,7 @@ main {
 .after-wrapper {
     position: absolute;
     inset: 0;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
 }
 .slider-control {
