@@ -775,37 +775,26 @@ main {
 .comparison-slider {
     position: relative;
     max-width: 1000px;
-    height: 600px;
+    aspect-ratio: 16 / 9;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
 }
 
-/* BEFORE image */
-.comparison-slider > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* AFTER container */
-.after-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-/* AFTER image */
+.comparison-slider > img,
 .after-wrapper img {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.after-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 50%;
+    overflow: hidden;
 }
 .slider-control {
     position: absolute;
