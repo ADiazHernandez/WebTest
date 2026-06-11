@@ -681,12 +681,22 @@ main {
 }
 
 @media (max-width: 820px) {
+
   .header-inner {
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .nav-toggle {
     display: inline-flex;
+    margin-left: auto;
+  }
+
+  .lang-toggle {
+    position: static;
+    margin-left: 0;
   }
 
   .site-nav {
